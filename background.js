@@ -1,3 +1,5 @@
+// Setting the Chrome Cleaning Alarm
+
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.action === "setAlarm") {
         chrome.alarms.clearAll(() => {
