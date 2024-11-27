@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     cleanNowButton.addEventListener('click', () => {
         chrome.runtime.sendMessage({ action: "cleanNow" }, (response) => {
             if (response?.success) {
-                showCountdownAndClose('Local storage cleaned! Closing in', 5);
+                showCountdownAndClose('Interval confirmed! Closing in', 5);
             } else {
                 alert(`Failed to clean now: ${response?.error || 'Unknown error'}`);
             }

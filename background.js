@@ -35,7 +35,7 @@ function cleanLocalStorageAndReloadTab() {
                     if (videoQuality) {
                         localStorage.setItem("video-quality", videoQuality);
                     }
-                    alert("Local storage cleaned!");
+                    // alert("Local storage cleaned!");
                     window.location.reload();
                 },
             });
