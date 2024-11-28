@@ -5,6 +5,7 @@
   "description": "Clears local storage at scheduled intervals.",
   "permissions": ["storage", "scripting", "alarms", "tabs", "activeTab"],
   "action": {
+    "default_title": "Clean Now",
     "default_popup": "popup.html",
     "default_icon": {
       "16": "icon16.png",

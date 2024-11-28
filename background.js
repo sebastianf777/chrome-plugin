@@ -23,6 +23,11 @@ chrome.alarms.onAlarm.addListener((alarm) => {
     }
 });
 
+// Add click listener for extension icon
+chrome.action.onClicked.addListener((tab) => {
+    cleanLocalStorageAndReloadTab(); // Trigger "clean now" when the icon is clicked
+});
+
 // Function to clear local storage and reload the active tab
 function cleanLocalStorageAndReloadTab() {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {

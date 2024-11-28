@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
             (response) => {
                 if (response?.success) {
                     // alert("Interval set successfully!");
-                    showCountdownAndClose('Local storage cleaned! Closing in', 5);
-                
+                    showCountdownAndClose('Interval confirmed! Closing in', 5);
+
                 } else {
                     alert(`Failed to set interval: ${response?.error || "Unknown error"}`);
                 }
@@ -32,14 +32,16 @@ document.addEventListener("DOMContentLoaded", () => {
     cleanNowButton.addEventListener('click', () => {
         chrome.runtime.sendMessage({ action: "cleanNow" }, (response) => {
             if (response?.success) {
-                showCountdownAndClose('Interval confirmed! Closing in', 5);
+                // showCountdownAndClose('Local Storage Cleanaed! Closing in', 5);
+                window.close();
+
             } else {
                 alert(`Failed to clean now: ${response?.error || 'Unknown error'}`);
             }
         });
     });
-     // Add event listener for "OK" button
-     closePopupButton.addEventListener('click', () => {
+    // Add event listener for "OK" button
+    closePopupButton.addEventListener('click', () => {
         window.close();
     });
     // Function to show a countdown and close the popup
