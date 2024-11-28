@@ -6,7 +6,6 @@
   "permissions": ["storage", "scripting", "alarms", "tabs", "activeTab"],
   "action": {
     "default_title": "Clean Now",
-    "default_popup": "popup.html",
     "default_icon": {
       "16": "icon16.png",
       "128": "icon128.png"

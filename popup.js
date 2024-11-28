@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const cleanNowButton = document.getElementById('cleanNow');
     const closePopupButton = document.getElementById('closePopup');
 
+    showCountdownAndClose('You have 5 seconds to choose an interval or this popup will close automatically', 5);
 
     // Add event listener for "Set Interval" button
     setIntervalButton.addEventListener("click", () => {
@@ -61,8 +62,5 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }, 1000);
     }
-    okButton.addEventListener("click", () => {
-        okButton.style.display = "none";
-    });
 
 });
