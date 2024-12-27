@@ -3,7 +3,18 @@
   "name": "Local Storage Cleaner",
   "version": "1.0",
   "description": "Clears local storage at scheduled intervals.",
-  "permissions": ["storage", "scripting", "alarms", "tabs", "activeTab"],
+  "permissions": [
+    "storage",
+    "tabs",
+    "scripting",
+    "alarms",
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+],
   "action": {
     "default_title": "Clean Now",
     "default_icon": {
